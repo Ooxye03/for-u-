@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Interactive Clock to Game</title>
+</head>
+<body>
+
+  <button class="toggle">Dark mode</button>
+
+  <!-- Section 1: Clock + Music -->
+  <section class="section" id="section-clock">
+    <div class="clock-container">
+      <div class="clock">
+        <div class="needle hour"></div>
+        <div class="needle minute"></div>
+        <div class="needle second"></div>
+        <div class="center-point"></div>
+      </div>
+      <div class="time"></div>
+      <div class="date"></div>
+    </div>
+
+    <div class="music-options">
+      <h3>Pilih Musik Favoritmu 🎶</h3>
+      <ul>
+        <li>
+          <p>1. Don’t You Remember</p>
+          <audio id="audio1" controls loop>
+            <source src="audio/Don_t_You_Remember.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <li>
+          <p>2. When You’re Gone</p>
+          <audio id="audio2" controls loop>
+            <source src="audio/When_you_re_Gone.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <li>
+          <p>3. Somewhere Only We Know</p>
+          <audio id="audio3" controls loop>
+            <source src="audio/somewhere_only_we_know.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <li>
+          <p>4. Let Me Down Slowly</p>
+          <audio id="audio4" controls loop>
+            <source src="audio/Let_Me_Down_Slowly.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+      </ul>
+      <p class="scroll-note">⬆️ Scroll ke atas untuk lanjut ke verifikasi kode</p>
+    </div>
+  </section>
+
+  <!-- Section 2: Code Verification -->
+  <section class="section" id="section-verify">
+    <div class="container">
+      <h2>Masukkan Kode Akses</h2>
+      <p>Ketik kode: <strong>340071</strong></p>
+      <div class="code-container">
+        <input type="number" class="code" maxlength="1" />
+        <input type="number" class="code" maxlength="1" />
+        <input type="number" class="code" maxlength="1" />
+        <input type="number" class="code" maxlength="1" />
+        <input type="number" class="code" maxlength="1" />
+        <input type="number" class="code" maxlength="1" />
+      </div>
+      <p class="error-message"></p>
+    </div>
+  </section>
+
+  <!-- Section 3: Typing Game -->
+  <section class="section" id="section-game">
+    <div class="container">
+      <h2>👩‍💻 Speed Typer 👨‍💻</h2>
+      <small>Ketik kata berikut:</small>
+      <h1 id="word"></h1>
+      <input id="text" type="text" autocomplete="off" placeholder="Type here..." autofocus />
+      <p class="time-container">Sisa waktu: <span id="time">10s</span></p>
+      <p class="score-container">Skor: <span id="score">0</span></p>
+      <div id="end-game-container" class="end-game-container"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
