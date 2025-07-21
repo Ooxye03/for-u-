@@ -152,3 +152,12 @@ input, button {
   justify-content: center;
   margin-top: 30px;
 }
+
+#section-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
