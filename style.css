@@ -187,3 +187,7 @@ input, button {
   cursor: pointer;
   color: var(--text-color);
 }
+
+body.lock-scroll {
+  overflow: hidden;
+}
