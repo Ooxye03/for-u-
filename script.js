@@ -1,17 +1,6 @@
-window.history.scrollRestoration = 'manual';
-
 window.addEventListener('load', () => {
-  document.getElementById('section-clock').scrollIntoView({ behavior: 'smooth' });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        document.body.style.overflow = 'hidden'; // Kunci scroll ke atas
-      }
-    });
-  });
-
-  observer.observe(document.getElementById('section-clock'));
+  // Scroll manual ke atas saat user swipe up, tidak auto scroll
+  window.scrollTo(0, 0);
 });
 
 window.addEventListener('load', () => {
@@ -95,6 +84,7 @@ codes.forEach((code, idx) => {
       if (enteredCode === correctCode) {
         document.body.classList.add('lock-scroll');
         document.getElementById('section-game').scrollIntoView({ behavior: 'smooth' });
+        document.body.style.overflow = 'hidden';
       } else {
         document.querySelector('.error-message').innerText = "❌ Kode salah!";
       }
