@@ -1,9 +1,5 @@
 window.addEventListener('load', () => {
-  // Scroll manual ke atas saat user swipe up, tidak auto scroll
   window.scrollTo(0, 0);
-});
-
-window.addEventListener('load', () => {
   document.getElementById('section-clock').scrollIntoView({ behavior: 'smooth' });
 });
 
