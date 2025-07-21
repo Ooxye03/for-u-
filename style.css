@@ -1,0 +1,154 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111;
+  --accent-color: #3498db;
+}
+
+html.dark {
+  --bg-color: #111;
+  --text-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Heebo', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  cursor: pointer;
+}
+
+.clock-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  background: var(--text-color);
+  transform-origin: bottom center;
+  transition: 0.5s;
+}
+
+.needle.hour { height: 60px; }
+.needle.minute { height: 90px; }
+.needle.second { height: 100px; background: red; }
+
+.center-point {
+  width: 10px;
+  height: 10px;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.date {
+  color: gray;
+  font-size: 14px;
+}
+
+.music-options {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.music-options h3 {
+  font-size: 18px;
+}
+
+.music-options ul {
+  list-style: none;
+  padding: 0;
+}
+
+.music-options li {
+  margin: 15px 0;
+}
+
+.music-options audio {
+  width: 250px;
+}
+
+.scroll-note {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.code-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.code {
+  font-size: 40px;
+  width: 40px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+input, button {
+  font-family: inherit;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.time-container, .score-container {
+  margin-top: 20px;
+}
+
+.end-game-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
