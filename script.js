@@ -1,3 +1,9 @@
+window.history.scrollRestoration = 'manual';
+
+window.addEventListener('load', () => {
+  document.getElementById('section-clock').scrollIntoView({ behavior: 'smooth' });
+});
+
 // ===== CLOCK =====
 const hourEl = document.querySelector('.hour');
 const minuteEl = document.querySelector('.minute');
