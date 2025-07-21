@@ -139,3 +139,12 @@ textEl.addEventListener('input', e => {
     updateTime();
   }
 });
+
+#section-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
