@@ -2,6 +2,20 @@ window.history.scrollRestoration = 'manual';
 
 window.addEventListener('load', () => {
   document.getElementById('section-clock').scrollIntoView({ behavior: 'smooth' });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        document.body.style.overflow = 'hidden'; // Kunci scroll ke atas
+      }
+    });
+  });
+
+  observer.observe(document.getElementById('section-clock'));
+});
+
+window.addEventListener('load', () => {
+  document.getElementById('section-clock').scrollIntoView({ behavior: 'smooth' });
 });
 
 // ===== CLOCK =====
@@ -48,11 +62,22 @@ setTime();
 
 // ===== MUSIC EXCLUSIVE PLAY =====
 const audios = document.querySelectorAll('audio');
-audios.forEach(audio => {
-  audio.addEventListener('play', () => {
-    audios.forEach(a => {
-      if (a !== audio) a.pause();
+
+const playButtons = document.querySelectorAll('.play-btn');
+playButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const audioId = btn.getAttribute('data-audio');
+    const selected = document.getElementById(audioId);
+
+    audios.forEach(audio => {
+      if (audio !== selected) audio.pause();
     });
+
+    if (selected.paused) {
+      selected.play();
+    } else {
+      selected.pause();
+    }
   });
 });
 
