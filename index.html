@@ -25,32 +25,32 @@
 
     <div class="music-options">
       <h3>Pilih Musik Favoritmu 🎶</h3>
-      <ul>
-        <li>
-          <p>1. Don’t You Remember</p>
-          <audio id="audio1" controls loop>
-            <source src="audio/Don_t_You_Remember.mp3" type="audio/mpeg" />
-          </audio>
-        </li>
-        <li>
-          <p>2. When You’re Gone</p>
-          <audio id="audio2" controls loop>
-            <source src="audio/When_you_re_Gone.mp3" type="audio/mpeg" />
-          </audio>
-        </li>
-        <li>
-          <p>3. Somewhere Only We Know</p>
-          <audio id="audio3" controls loop>
-            <source src="audio/somewhere_only_we_know.mp3" type="audio/mpeg" />
-          </audio>
-        </li>
-        <li>
-          <p>4. Let Me Down Slowly</p>
-          <audio id="audio4" controls loop>
-            <source src="audio/Let_Me_Down_Slowly.mp3" type="audio/mpeg" />
-          </audio>
-        </li>
+      
+      <ul class="music-list">
+  <li>
+    <span>1. Don’t You Remember</span>
+    <button class="play-btn" data-audio="audio1">▶</button>
+  </li>
+  <li>
+    <span>2. When You’re Gone</span>
+    <button class="play-btn" data-audio="audio2">▶</button>
+  </li>
+  <li>
+    <span>3. Somewhere Only We Know</span>
+    <button class="play-btn" data-audio="audio3">▶</button>
+  </li>
+  <li>
+    <span>4. Let Me Down Slowly</span>
+    <button class="play-btn" data-audio="audio4">▶</button>
+  </li>
       </ul>
+      
+      <!-- Hidden audio players -->
+<audio id="audio1" src="audio/Don_t_You_Remember.mp3" loop></audio>
+<audio id="audio2" src="audio/When_you_re_Gone.mp3" loop></audio>
+<audio id="audio3" src="audio/somewhere_only_we_know.mp3" loop></audio>
+<audio id="audio4" src="audio/Let_Me_Down_Slowly.mp3" loop></audio>
+      
       <p class="scroll-note">⬆️ Scroll ke atas untuk lanjut ke verifikasi kode</p>
     </div>
   </section>
