@@ -93,6 +93,7 @@ codes.forEach((code, idx) => {
     const enteredCode = [...codes].map(c => c.value).join('');
     if (enteredCode.length === 6) {
       if (enteredCode === correctCode) {
+        document.body.classList.add('lock-scroll');
         document.getElementById('section-game').scrollIntoView({ behavior: 'smooth' });
       } else {
         document.querySelector('.error-message').innerText = "❌ Kode salah!";
